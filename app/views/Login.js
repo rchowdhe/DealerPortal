@@ -4,11 +4,11 @@ class Login extends Component {
 
     onLogin() {
         var values = {
-            username: this.refs.email.value,
+            username: this.refs.username.value,
             password: this.refs.password.value
         }
         localStorage.setItem('username', values.username);
-        if (values.username == 'Rajiv' || 'Jai' || 'Vikarsh' || 'Admin') {
+        if (values.username == 'Rajiv' || values.username == 'Jai' || values.username == 'Vikarsh' || values.username == 'Admin') {
             if (values.password == values.username) {
                 this.context.router.replace('/main');
             }
@@ -31,7 +31,7 @@ class Login extends Component {
                     <p>Login in. To manage dealer operations.</p>
                     <form onSubmit={this.onLogin.bind(this)} className="m-t" role="form">
                         <div className="form-group">
-                            <input ref="email" type="username" className="form-control" placeholder="Email" required="" />
+                            <input ref="username" type="username" className="form-control" placeholder="username" required="" />
                         </div>
                         <div className="form-group">
                             <input ref="password" type="password" className="form-control" placeholder="Password" required="" />
