@@ -5,12 +5,12 @@ import Blank from '../components/layouts/Blank';
 import MainView from '../views/Main';
 import MinorView from '../views/Minor';
 import DealerOperations from '../views/DealerOperations';
-
+import Login from '../views/Login';
 import { Route, Router, IndexRedirect, browserHistory } from 'react-router';
 
 export default (
     <Router history={browserHistory}>
-        <Route path="/" component={Main}>
+        <Route path="/" component={Login}>
             <IndexRedirect to="/main" />
             <Route path="main" component={MainView}> </Route>
             <Route path="minor" component={MinorView}> </Route>
