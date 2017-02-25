@@ -22,11 +22,9 @@ class Login extends Component {
                             <input type="password" className="form-control" placeholder="Password" required="" />
                         </div>
                         <button type="submit" className="btn btn-primary block full-width m-b">Login</button>
-
                         <a href="#"><small>Forgot password?</small></a>
-                        <p className="text-muted text-center"><small>Do not have an account?</small></p>
                     </form>
-                    <p className="m-t"> <small>Inspinia we app framework base on Bootstrap 3 &copy; 2014</small> </p>
+                    <p className="m-t"> <small><strong>Copyright</strong> STERIS corporation &copy; 2015-2017</small> </p>
                 </div>
             </div>
         )
