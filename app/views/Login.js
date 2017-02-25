@@ -2,24 +2,19 @@ import React, { Component } from 'react';
 
 class Login extends Component {
 
-onLogin() {
-    this.context.router.replace('/Main');
-}
+    onLogin() {
+        this.context.router.replace('/main');
+    }
     render() {
         return (
             <div className="middle-box text-center loginscreen animated fadeInDown">
                 <div>
                     <div>
-
-                       <div className="logo-name"><img src="img/STERIS-Logo.png" width="100%" /></ div>
-
+                        <div className="logo-name"><img src="img/STERIS-Logo.png" width="100%" /></ div>
                     </div>
-                    <h3>Welcome to STERIS</h3>
-                    <p>Perfectly designed and precisely prepared admin theme with over 50 pages with extra new web app views.
-
-            </p>
-                    <p>Login in. To see it in action.</p>
-                    <form onSubmit = {this.onLogin.bind(this)} className="m-t" role="form" action="index.html">
+                    <h3>Welcome to DEALER PORTAL</h3>
+                    <p>Login in. To manage dealer operations.</p>
+                    <form onSubmit={this.onLogin.bind(this)} className="m-t" role="form">
                         <div className="form-group">
                             <input type="email" className="form-control" placeholder="Email" required="" />
                         </div>
