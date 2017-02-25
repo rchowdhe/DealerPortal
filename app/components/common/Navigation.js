@@ -23,16 +23,18 @@ class Navigation extends Component {
                     <ul className="nav metismenu" id="side-menu" ref="menu">
                         <li className="nav-header">
                             <div className="dropdown profile-element"> <span>
+                                { localStorage.getItem('username') == 'Rajiv' ? <img alt="image" className="img-circle" src="img/avtar.jpg"/> : <img alt="image" className="img-circle" src="img/profile_small.jpg"/> }
+                                
                              </span>
                                 <a data-toggle="dropdown" className="dropdown-toggle" href="#">
-                            <span className="clear"> <span className="block m-t-xs"> <strong className="font-bold">Example user</strong>
-                             </span> <span className="text-muted text-xs block">Example position<b className="caret"></b></span> </span> </a>
+                            <span className="clear"> <span className="block m-t-xs"> <strong className="font-bold">{localStorage.getItem('username')}</strong>
+                             </span> <span className="text-muted text-xs block">Developer<b className="caret"></b></span> </span> </a>
                                 <ul className="dropdown-menu animated fadeInRight m-t-xs">
                                     <li><a href="#"> Logout</a></li>
                                 </ul>
                             </div>
                             <div className="logo-element">
-                                IN+
+                              <img src="img/STERIS-Logo-Small.png" width="50%" />
                             </div>
                         </li>
                         <li className={this.activeRoute("/main")}>

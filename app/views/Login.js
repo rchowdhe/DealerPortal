@@ -3,7 +3,22 @@ import React, { Component } from 'react';
 class Login extends Component {
 
     onLogin() {
-        this.context.router.replace('/main');
+        var values = {
+            username: this.refs.email.value,
+            password: this.refs.password.value
+        }
+        localStorage.setItem('username', values.username);
+        if (values.username == 'Rajiv' || 'Jai' || 'Vikarsh' || 'Admin') {
+            if (values.password == values.username) {
+                this.context.router.replace('/main');
+            }
+            else {
+                alert('Username or password are incorrect');
+            }
+        }
+        else {
+            alert('Username is not registered yet, Please signup for login');
+        }
     }
     render() {
         return (
@@ -16,10 +31,10 @@ class Login extends Component {
                     <p>Login in. To manage dealer operations.</p>
                     <form onSubmit={this.onLogin.bind(this)} className="m-t" role="form">
                         <div className="form-group">
-                            <input type="email" className="form-control" placeholder="Email" required="" />
+                            <input ref="email" type="username" className="form-control" placeholder="Email" required="" />
                         </div>
                         <div className="form-group">
-                            <input type="password" className="form-control" placeholder="Password" required="" />
+                            <input ref="password" type="password" className="form-control" placeholder="Password" required="" />
                         </div>
                         <button type="submit" className="btn btn-primary block full-width m-b">Login</button>
                         <a href="#"><small>Forgot password?</small></a>
