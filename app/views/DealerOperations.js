@@ -11,7 +11,7 @@ class DealerOperations extends Component {
         return (
             <div className="wrapper wrapper-content animated fadeInRight">
                 <div className="row">
-                    <div width="100%" height="100%" dangerouslySetInnerHTML={this.iframe()} />
+                    <div  style = {{height : '631px'}} width="100%" height="100%" dangerouslySetInnerHTML={this.iframe()} />
                 </div>
             </div>
         )
