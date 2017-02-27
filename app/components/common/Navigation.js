@@ -38,10 +38,10 @@ class Navigation extends Component {
                             </div>
                         </li>
                         <li className={this.activeRoute("/main")}>
-                            <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">Main view</span></Link>
+                            <Link to="/main"><i className="fa fa-th-large"></i> <span className="nav-label">Dashboard</span></Link>
                         </li>
-                        <li className={this.activeRoute("/minor")}>
-                            <Link to="/minor"><i className="fa fa-th-large"></i> <span className="nav-label">Minor view</span></Link>
+                        <li className={this.activeRoute("/dealeroperations")}>
+                            <Link to="/dealeroperations"><i className="fa fa-th-large"></i> <span className="nav-label">Dealer operations</span></Link>
                         </li>
                     </ul>
 
